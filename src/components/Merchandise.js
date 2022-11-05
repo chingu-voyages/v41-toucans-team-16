@@ -1,17 +1,17 @@
 import React from 'react';
 import './Merchandise.css';
-import { useEffect, useState } from 'react';
-import data from '../assets/merch-items.json';
 import video from '../assets/video-filter-cup.mp4';
 import poster from '../assets/image-coffee-shop.jpg';
+/* IMAGES */
+import totebag from "../assets/tote-bag.png";
+import tumbler from "../assets/tumblerbg.png";
+import giftbox from  "../assets/gift_box1.jpg";
+import coasters from "../assets/coasters.jpg";
+import mug from "../assets/mug.png";
+import dripcoffee from "../assets/drip_coffee-bg.png";
 
 export default function Merchandise() {
-	const [products, setProducts] = useState(data.merch);
 
-	useEffect(() => {
-		setProducts(products);
-	}, [products]);
-	console.log(products);
 	return (
 		<>
 			<section className="merch-hero">
@@ -38,22 +38,77 @@ export default function Merchandise() {
 			</section>
 			<section className="merch">
 				{/* add this div for layout */}
-				<div className="merch-container container">
-					{products.map((item) => {
-						return (
-							// container should be outside map , will use merch-container
-							// <div className="card-container">
-							<div className="card">
-								{/* image location ../images/ */}
-								<img src={item.img} alt={item.name} />
-								<p className="name">{item.name}</p>
-								<p className="description">{item.description}</p>
-								<p className="price">{item.price}</p>
-								<button>Add to Card</button>
-							</div>
-							// </div>
-						);
-					})}
+				<div className="merch-container">
+
+					<div className="merch-cards">
+
+						<div className="merch-card">
+							<img src={totebag} alt="totebag" />
+								<div className="merch-card-text">
+									<div className="merch-text">
+										<h4>Totebag</h4>
+										<p>$5.99</p>
+									</div>
+									<button>Add to Cart</button>
+								</div>
+						</div>
+
+						<div className="merch-card">
+							<img src={giftbox} alt="giftbox" />
+								<div className="merch-card-text">
+									<div className="merch-text">
+										<h4>Giftbox</h4>
+										<p>$12.99</p>
+									</div>
+									<button>Add to Cart</button>
+								</div>
+						</div>
+
+						<div className="merch-card">
+							<img src={tumbler} alt="tumbler" />
+								<div className="merch-card-text">
+									<div className="merch-text">
+										<h4>Tumbler</h4>
+										<p>$7.99</p>
+									</div>
+									<button>Add to Cart</button>
+								</div>
+						</div>
+
+						<div className="merch-card">
+							<img src={coasters} alt="coasters" />
+								<div className="merch-card-text">
+									<div className="merch-text">
+										<h4>Coasters</h4>
+										<p>$8.43</p>
+									</div>
+									<button>Add to Cart</button>
+								</div>
+						</div>
+
+						<div className="merch-card">
+							<img src={mug} alt="mug" />
+								<div className="merch-card-text">
+									<div className="merch-text">
+										<h4>Totebag</h4>
+										<p>$5.99</p>
+									</div>
+									<button>Add to Cart</button>
+								</div>
+						</div>
+
+						<div className="merch-card">
+							<img src={dripcoffee} alt="drip-coffee"/>
+								<div className="merch-card-text">
+									<div className="merch-text">
+										<h4>Drip Coffe</h4>
+										<p>$15.64</p>
+									</div>
+									<button>Add to Cart</button>
+								</div>
+						</div>
+
+					</div>
 				</div>
 			</section>
 		</>

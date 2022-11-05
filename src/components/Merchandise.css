@@ -21,50 +21,68 @@
 	align-items: center;
 	justify-content: center;
 	gap: 0.75rem;
-	width: 320px;
+	width: 300px;
+	border-radius: 5px;
 	/* we center with align-items and set same width with the img*/
 	/* margin: 0 auto; */
 	/* width: 30%; */
 }
-.merch h1 {
-	font-size: 1rem;
+
+.merch .card{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0px 10px;
+	width: 300px;
 }
-.merch p {
-	font-size: 0.8rem;
+
+
+
+button{
+	width: 100%;
 }
-.placeholder {
-	/* 320px like in Menu */
-	height: 320px;
-	width: 320px;
-	background-color: teal;
-	border: 1px solid darkblue;
+.merch-text h4{
+	font-size: 1.4rem;
+}
+.merch-text p{
+	font-size: 1.4rem;
+}
+.merch-text {
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: space-around;
+	margin: 0px;
+	width: 100%;
 }
 .merch img {
-	width: 320px;
-	height: 320px;
+	width: 300px;
+	height: 300px;
 	align-items: center;
+	background-color: #f4f1eb;
+	border-radius: 15px;
+
 }
 /* .merch .card {
 	margin: 0 auto;
 } */
-.merch .card .name {
-	font-size: 0.8rem;
-	text-transform: capitalize;
-}
-.merch .card .description {
-	font-size: 0.7rem;
-	overflow-x: hidden;
-}
+
 .merch button {
-	background-color: var(--main-bg);
-	color: white;
-	border-radius: 10px;
-	outline: none;
-	padding: 10px;
+ color: var(--main-white);
+  background-color: var(--main-bg);
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+.merch button:hover {
+  opacity: 0.75;
+  color: var(--main-orange);
 }
 /* media queries */
 @media (min-width: 768px) {
-	.merch-container {
+	.merch-container  {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
