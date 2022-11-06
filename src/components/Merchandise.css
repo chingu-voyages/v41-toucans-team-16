@@ -3,11 +3,7 @@
 }
 .merch {
 	color: black;
-	/* display: flex; */
-	/* width: 100%; */
-	/* contain: content;
-	flex-wrap: wrap; */
-	/*   color: #4c243b; */
+	flex-wrap: wrap;
 }
 .merch-container {
 	position: relative;
@@ -17,27 +13,21 @@
 	justify-content: center;
 }
 .merch .card {
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 0.75rem;
 	width: 300px;
 	border-radius: 5px;
-	/* we center with align-items and set same width with the img*/
-	/* margin: 0 auto; */
-	/* width: 30%; */
+	display: flex;
 }
-
 .merch .card{
 	display: flex;
 	justify-content: space-evenly;
 	padding: 0px 10px;
 	width: 300px;
 }
-
-
-
-button{
+#add{
+	margin-top: 10px;
 	width: 100%;
 }
 .merch-text h4{
@@ -59,12 +49,7 @@ button{
 	align-items: center;
 	background-color: #f4f1eb;
 	border-radius: 15px;
-
 }
-/* .merch .card {
-	margin: 0 auto;
-} */
-
 .merch button {
  color: var(--main-white);
   background-color: var(--main-bg);
@@ -80,13 +65,14 @@ button{
   opacity: 0.75;
   color: var(--main-orange);
 }
+
 /* media queries */
 @media (min-width: 768px) {
-	.merch-container  {
+	.merch-container {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		/* gap for space in between cards, padding for lateral space */
+		/* gap for space in between cards, padding for lateral space*/
 		gap: 3rem;
 		padding: 0 3rem;
 	}
